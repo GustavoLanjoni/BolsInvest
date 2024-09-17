@@ -1,0 +1,136 @@
+.hidden-ativos {
+    display: none; /* Oculta inicialmente os ativos escondidos */
+}
+
+#sec-ativos {
+    display: flex; /* Usa Flexbox para alinhar os itens em linha */
+    flex-wrap: wrap; /* Permite que os itens que não cabem na linha atual vão para a linha seguinte */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 20px; /* Espaçamento entre a barra de pesquisa e os ativos */
+}
+
+.sec-ativos {
+    display: inline-block; /* Faz com que os elementos fiquem lado a lado */
+    vertical-align: top; /* Alinha os itens no topo */
+    width: 110px; /* Ajuste o tamanho conforme necessário */
+    margin: 10px; /* Espaçamento entre os itens */
+    padding:10px;
+    background-color: rgba(0, 0, 0, 0.233);
+    border: 1px solid #004c68;
+    transition: background-color 500ms, transform 500ms; /* Transição suave para hover */
+}
+
+.sec-ativos:hover {
+    background-color: #0a7399ab;
+    transform: scale(1.1);
+}
+
+.img-ativos {
+    width: 65px;
+}
+
+.button-ativos {
+    background-color: #ffffff17;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    border: #004c68 1px solid;
+}
+
+.button-ativos:hover {
+    background-color: rgba(0, 255, 0, 0.171);
+}
+
+.text-ativos {
+    cursor: default;
+}
+
+#pesquisa {
+
+    
+     
+    width: 40%;
+    padding: 14px;
+    border: 1px solid #004c68;
+    border-radius: 5px;
+    margin-bottom: 15px; /* Espaçamento inferior para dar espaço entre a barra de pesquisa e o conteúdo abaixo */
+}
+
+#adicionarAtivoButton {
+    padding: 10px 20px;
+    background-color: #004c68;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px; /* Espaçamento entre o botão e os ativos */
+}
+
+#adicionarAtivoButton:hover {
+    background-color: #0a7399ab;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    main {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    footer {
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+/*Outros ativos*/
+
+.ativos {
+
+    background-color:#022d3d;
+    text-align: center;
+
+    
+
+}
+
+.Fundo-emobiliario {
+
+    
+    width: 100px;
+    margin: 0 15px;
+    background-color: #ffc600;
+    color: #000000;
+    border: none;
+    padding:10px 0px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animações suaves */
+    margin-top: 40px;
+    
+
+  
+
+}
+.Fundo-emobiliario:hover {
+
+    transform: translateY(-5px); /* Move o botão para cima */
+    box-shadow: 0 4px 8px #07516c; /* Adiciona uma sombra para efeito de elevação */
+
+
+}
+
+/*bolsa*/
+
+.bolsa {
+
+    position: absolute;
+    top: 2; /* Subir para o topo da página */
+
+}

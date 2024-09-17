@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="deposito.css">
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+    <title>Transferencia</title>
+</head>
+<body>
+    <header>
+        <img id="bols-logo" src="/Bols/inicio/Entrar/Bolsa/img/login/img/Header.png" alt="Logo Bols">
+        <button id="menu-toggle" onclick="toggleMenu()">
+            <img src="menu-aberto.png" alt="Botão Menu" width="40px" height="40px">
+        </button>
+        <nav id="nav">
+            <a href="/Bols/inicio/Entrar/Bolsa/img/login/Inicio/inicio.html">INICIO</a>
+            <a href="/Bols/inicio/Entrar/Bolsa/img/login/Inicio/bolsa/bolsa.html">BOLSA</a>
+            <a href="./estudo.html">ESTUDO</a>
+            <a href="./sobre.html">SOBRE</a>
+        </nav>
+    </header>  
+    <h1 class="h1-1">Como você quer depositar na sua conta Bols?</h1>
+
+    <div class="container-texto">
+        <div class="img-user">
+            <img src="/Bols/inicio/Entrar/Bolsa/img/login/Inicio/img/user.png" alt="user" width="40px" height="40px">
+        </div>
+        <p class="ondeV">A conta de onde você vai transferir o dinheiro<br> <strong> estar no seu nome (CPF)</strong>.</p>
+    </div>
+
+    <div class="container-texto">
+        <img class="relogio" src="/Bols/inicio/Entrar/Bolsa/img/login/Inicio/img/relogio.png" alt="relogio" width="40px" height="40px">
+        <p class="horario">Os depósitos via Pix e TED são compensados <br><strong> dias úteis, das 08:00 às 18:00.</strong></p>
+    </div>
+
+
+    <!-- Script para alternar a visibilidade do menu -->
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById("nav");
+            nav.classList.toggle("show");
+        }
+    </script>
+</body>
+</html>

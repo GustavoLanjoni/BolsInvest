@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
+
+/* Estiliza o corpo da página */
+body {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+	font-family: Arial, sans-serif;
+	background-color: #ffc600;
+}
+
+/* Estiliza o container principal da página */
+.container {
+	width: 50%;
+	margin: 40px auto;
+	background-color: #fff;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estiliza os grupos de campos do formulário */
+.form-group {
+	margin-bottom: 20px;
+}
+
+/* Estiliza os rótulos dos campos do formulário */
+.label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+/* Estiliza os campos de texto do formulário */
+.input-field {
+	width: 200px;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+}
+
+/* Estiliza o botão de submissão do formulário */
+.button {
+	background-color: #022d3d;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+/* Estiliza o botão de submissão do formulário quando hover */
+.button:hover {
+	background-color: #022d3d;
+}
+
+img {
+
+  
+    height: 50px;
+    width: 30%;
+
+}
