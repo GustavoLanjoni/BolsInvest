@@ -1,3 +1,5 @@
+
+
 .hidden-ativos {
     display: none; /* Oculta inicialmente os ativos escondidos */
 }
@@ -55,6 +57,7 @@
     border: 1px solid #004c68;
     border-radius: 5px;
     margin-bottom: 15px; /* Espaçamento inferior para dar espaço entre a barra de pesquisa e o conteúdo abaixo */
+    margin-top: 40px;
 }
 
 #adicionarAtivoButton {
@@ -95,14 +98,13 @@
 
     background-color:#022d3d;
     text-align: center;
-
+    
     
 
 }
 
 .Fundo-emobiliario {
 
-    
     width: 100px;
     margin: 0 15px;
     background-color: #ffc600;
@@ -113,6 +115,8 @@
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animações suaves */
     margin-top: 40px;
+    
+    
     
 
   
@@ -126,11 +130,3 @@
 
 }
 
-/*bolsa*/
-
-.bolsa {
-
-    position: absolute;
-    top: 2; /* Subir para o topo da página */
-
-}
