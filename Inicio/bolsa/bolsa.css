@@ -1,4 +1,9 @@
 
+body {
+
+    background-color: #022d3d;
+
+}
 
 .hidden-ativos {
     display: none; /* Oculta inicialmente os ativos escondidos */
@@ -103,30 +108,4 @@
 
 }
 
-.Fundo-emobiliario {
-
-    width: 100px;
-    margin: 0 15px;
-    background-color: #ffc600;
-    color: #000000;
-    border: none;
-    padding:10px 0px;
-    font-size: 17px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animações suaves */
-    margin-top: 40px;
-    
-    
-    
-
-  
-
-}
-.Fundo-emobiliario:hover {
-
-    transform: translateY(-5px); /* Move o botão para cima */
-    box-shadow: 0 4px 8px #07516c; /* Adiciona uma sombra para efeito de elevação */
-
-
-}
 
