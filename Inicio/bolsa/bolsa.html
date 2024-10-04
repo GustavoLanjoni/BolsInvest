@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bolsa</title>
-    <link rel="stylesheet" href="/Inicio/inicio.css">
     <link rel="stylesheet" href="/Inicio/bolsa/bolsa.css">
     <link rel="shortcut icon" href="/img/icon.ico" type="image/x-icon">
     <!--Bootstrap-->
@@ -23,11 +22,95 @@
     </header>
     <main>
 
-      
+      <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-containe">
+  <div class="tradingview-widget-containe__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://br.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text"></span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "FOREXCOM:SPXUSD",
+      "title": "S&P 500 Index"
+    },
+    {
+      "description": "",
+      "proName": "BMFBOVESPA:IBOV"
+    },
+    {
+      "description": "",
+      "proName": "BMFBOVESPA:VALE3"
+    },
+    {
+      "description": "",
+      "proName": "BMFBOVESPA:PETR4"
+    },
+    {
+      "description": "",
+      "proName": "BMFBOVESPA:BBAS3"
+    },
+    {
+      "description": "",
+      "proName": "BMFBOVESPA:PRIO3"
+    },
+    {
+      "description": "",
+      "proName": "BMFBOVESPA:BBDC4"
+    },
+    {
+      "description": "",
+      "proName": "BMFBOVESPA:MGLU3"
+    },
+    {
+      "description": "",
+      "proName": "BMFBOVESPA:ITSA4"
+    },
+    {
+      "description": "",
+      "proName": "BMFBOVESPA:WEGE3"
+    },
+    {
+      "description": "",
+      "proName": "BMFBOVESPA:B3SA3"
+    },
+    {
+      "description": "",
+      "proName": "BMFBOVESPA:ITUB4"
+    },
+    {
+      "description": "",
+      "proName": "BMFBOVESPA:INBR32"
+    },
+    {
+      "description": "",
+      "proName": "BMFBOVESPA:INBR32"
+    },
+    {
+      "description": "",
+      "proName": "BMFBOVESPA:INBR32"
+    },
+    {
+      "description": "",
+      "proName": "BMFBOVESPA:VAMO3"
+    }
+  ],
+  "showSymbolLogo": true,
+  "isTransparent": false,
+  "displayMode": "adaptive",
+  "colorTheme": "dark",
+  "locale": "br"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
 
 
 
+  <div class="search-bar-container">
+    <input Type="text" id="search-bar" placeholder="Pesquisar...">
+    <button id="search-button">Buscar Ativos</button>
 
+  </div>
 
 
 
@@ -40,10 +123,11 @@
             <h5 class="text-ativos">MGLU3</h5>
             <a href='magalu.html'><button class="button-ativos">Detalhes</button></a>
           </div>
+
           <div class="sec-ativos" id="ativos-petr4"><!--PETR4-->
             <img class="img-ativos" id="ativos-petr4-img" src="/img/petr4.png" alt="Ativo Petr">
             <h5 class="text-ativos">PETR4</h5>
-            <a href='https://br.tradingview.com/symbols/BMFBOVESPA-PETR4/' target="_blank"><button class="button-ativos">Detalhes</button></a>
+            <a href='petrobras.html'><button class="button-ativos">Detalhes</button></a>
           </div>
           <div class="sec-ativos" id="ativos-vale3"><!--VALE3-->
             <img class="img-ativos" id="ativos-vale3-img" src="/img/vale3.png" alt="Ativo Petr">
@@ -88,6 +172,45 @@
 
 
 
+
+
+    <!--Barra de pesquisa JS-->
+    <script>
+      // Lista de ativos (exemplo)
+      const ativos = [
+          { nome: "MGLU3", url: "magalu.html" },
+          { nome: "PETR3", url: "petrobras.html" },
+          { nome: "VALE3", url: "vale.html" },
+          { nome: "NFLX34", url: "netflix.html" },
+          { nome: "AAPL34", url: "iphone.html" },
+          { nome: "ABEV3", url: "ambev.html" },
+          { nome: "BBAS3", url: "bcBrasil.html" },
+          { nome: "RAIL3", url: "rumo.html" },
+          // Adicione mais ativos conforme necessário
+      ];
+  
+      document.getElementById('search-button').addEventListener('click', function() {
+          let query = document.getElementById('search-bar').value.trim().toUpperCase();
+          
+          if (query) {
+              // Filtra os ativos com base na pesquisa
+              const resultado = ativos.find(ativo => ativo.nome === query);
+              
+              // Verifica se há resultados
+              if (resultado) {
+                  // Redireciona para a página do ativo
+                  window.location.href = resultado.url;
+              } else {
+                  alert('Nenhum ativo encontrado.');
+              }
+          } else {
+              alert('Por favor, insira um termo para pesquisa.');
+          }
+      });
+  </script>
+  
+  
+  
 
 </body>
 </html>

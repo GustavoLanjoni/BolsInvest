@@ -1,9 +1,100 @@
+* {
+    box-sizing: border-box;
+}
 
 body {
-
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    height: 100%;
+    overflow-x: hidden; /* Remove a rolagem horizontal */
     background-color: #022d3d;
+}
+
+main {
+    flex: 1;
+    background-color: #022d3d;
+    color: white;
+    text-align: center;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px 60px;
+    background-color: #ffffff;
+    height: 100px;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#bols-logo {
+    width: 150px;
+    height: auto;
+    margin-right: 590px; /* Reduz a margem entre o logo e a navegação */
 
 }
+
+#menu-toggle {
+    display: none; /* Esconde o botão do menu por padrão */
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 200ms, color 200ms;
+}
+
+/* Menu móvel */
+@media (max-width: 600px) {
+    #menu-toggle {
+        display: block; /* Mostra o botão do menu em telas menores */
+    }
+
+    /* Menu móvel */
+    @media (max-width: 600px) {
+        nav {
+            position: fixed;
+            top: 100px;
+            left: 0;
+            width: 100%;
+            background-color: rgb(226, 226, 226);
+            flex-direction: column;
+            align-items: center;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+    
+        nav.show {
+            max-height: 300px; /* Ajuste conforme necessário */
+        }
+    
+        nav a {
+            width: 100%;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 20px;
+        }
+    }
+
+}
+
 
 .hidden-ativos {
     display: none; /* Oculta inicialmente os ativos escondidos */
@@ -97,59 +188,54 @@ body {
     }
 }
 
-/*botoes de ativos*/
-
-.botoes {
-    text-decoration: none !important;
-    cursor: pointer;
+/*Barra de Pesquisa*/
+/* Estilo da barra de pesquisa */
+.search-bar-container {
+    width: 100%; /* Largura total */
+    max-width: 400px; /* Largura máxima da barra de pesquisa */
+    margin: 20px auto; /* Centraliza horizontalmente */
+    display: flex; /* Usar flexbox para alinhar os itens */
+    border-radius: 30px; /* Bordas arredondadas */
+    overflow: hidden; /* Esconde partes do container que saem da borda */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
-.fiis {
-
-    background-color: #ffc600;
-    color: white;
-    padding: 10px 42px; /* Espaçamento interno */
-    text-align: center; /* Centraliza o texto */
-    display: inline-block; /* Para que o botão funcione como um botão */
-    margin: 4px 2px; /* Margem ao redor do botão */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-    border: none; /* Remove bordas */
-    border-radius: 4px; /* Bordas arredondadas */
-    font-size: 20px;
-    text-decoration: none;
-
+/* Estilo do input de pesquisa */
+#search-bar {
+    flex: 1; /* Faz o input ocupar o espaço restante */
+    padding: 12px 15px; /* Espaçamento interno do input */
+    border: none; /* Remove borda padrão do input */
+    border-radius: 30px 0 0 30px; /* Bordas arredondadas à esquerda */
+    outline: none; /* Remove contorno padrão ao focar */
+    font-size: 16px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    transition: all 0.3s; /* Transição suave para efeitos */
 }
 
-
-.acoes {
-
-    background-color: #ffc600;
-    color: #ffffff;
-    padding: 10px 42px;
-    text-align: center;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    border: none;
-    border-radius: 4px;
-    font-size: 20px;
-
-
-
+/* Efeito ao focar no input */
+#search-bar:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra ao focar */
 }
 
-.cripto {
-
-    background-color: #ffc600;
-    color: #ffffff;
-    padding: 10px 42px;
-    text-align: center;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    border: none;
-    border-radius: 4px;
-    font-size: 20px;
-
+/* Estilo do botão de pesquisa */
+#search-button {
+    padding: 12px 20px; /* Espaçamento interno do botão */
+    border: none; /* Remove borda padrão do botão */
+    background-color: #007BFF; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    border-radius: 0 30px 30px 0; /* Bordas arredondadas à direita */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s, transform 0.3s; /* Efeito de transição */
 }
 
+/* Efeito ao passar o mouse sobre o botão */
+#search-button:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+    transform: translateY(-2px); /* Sobe suavemente ao passar o mouse */
+}
+
+/* Efeito ao clicar no botão */
+#search-button:active {
+    transform: translateY(0); /* Retorna ao lugar ao clicar */
+}

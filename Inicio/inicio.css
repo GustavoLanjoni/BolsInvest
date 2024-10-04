@@ -127,7 +127,6 @@ nav a {
 
 main {
     flex: 1;
-    padding: 120px 20px 40px; /* Ajuste o padding-top para evitar sobreposição com o header fixo */
     background-color: #022d3d;
     color: white;
     text-align: center;
