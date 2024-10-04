@@ -97,7 +97,59 @@ body {
     }
 }
 
-/*Outros ativos*/
+/*botoes de ativos*/
+
+.botoes {
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.fiis {
+
+    background-color: #ffc600;
+    color: white;
+    padding: 10px 42px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    display: inline-block; /* Para que o botão funcione como um botão */
+    margin: 4px 2px; /* Margem ao redor do botão */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    border: none; /* Remove bordas */
+    border-radius: 4px; /* Bordas arredondadas */
+    font-size: 20px;
+    text-decoration: none;
+
+}
 
 
+.acoes {
+
+    background-color: #ffc600;
+    color: #ffffff;
+    padding: 10px 42px;
+    text-align: center;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+
+
+
+}
+
+.cripto {
+
+    background-color: #ffc600;
+    color: #ffffff;
+    padding: 10px 42px;
+    text-align: center;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+
+}
 
