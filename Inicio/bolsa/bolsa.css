@@ -105,18 +105,20 @@ nav a {
     flex-wrap: wrap; /* Permite que os itens que não cabem na linha atual vão para a linha seguinte */
     justify-content: center; /* Centraliza os itens horizontalmente */
     text-align: center; /* Centraliza o texto */
-    margin-top: 20px; /* Espaçamento entre a barra de pesquisa e os ativos */
+    margin-top: 50px; /* Espaçamento entre a barra de pesquisa e os ativos */
 }
 
 .sec-ativos {
+    
     display: inline-block; /* Faz com que os elementos fiquem lado a lado */
     vertical-align: top; /* Alinha os itens no topo */
-    width: 110px; /* Ajuste o tamanho conforme necessário */
+    width: 150px; /* Ajuste o tamanho conforme necessário */
     margin: 10px; /* Espaçamento entre os itens */
-    padding:10px;
+    padding:20px;
     background-color: rgba(0, 0, 0, 0.233);
     border: 1px solid #004c68;
     transition: background-color 500ms, transform 500ms; /* Transição suave para hover */
+    ;
 }
 
 .sec-ativos:hover {
@@ -125,7 +127,7 @@ nav a {
 }
 
 .img-ativos {
-    width: 65px;
+    width: 75px;
 }
 
 .button-ativos {
@@ -143,6 +145,19 @@ nav a {
 .text-ativos {
     cursor: default;
 }
+
+.sec-ativos:nth-child(10n) {
+    clear: both;
+  }
+  
+
+  #sec-ativos {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+
+  }
+
+
 
 #pesquisa {
 
@@ -239,3 +254,14 @@ nav a {
 #search-button:active {
     transform: translateY(0); /* Retorna ao lugar ao clicar */
 }
+
+
+
+
+
+  
+  
+
+
+  
+  
