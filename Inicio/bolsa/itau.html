@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="magalu.css">
+        <link rel="stylesheet" href="magalu.css">
     <link rel="shortcut icon" href="/img/itsa4.png" type="image/x-icon">
 
-    <title>Itau</title>
+    <title>Itausa</title>
 </head>
 <body>
     
-
     <header><!--Cabeçalho-->
         <img id="bols-logo" src="/img/Header.png" alt="Logo Bols">
         <nav id="nav">
@@ -39,24 +38,7 @@
       }
         </script>
       </div>
-    <style>
-        #tradingview-widget {
-            margin-top: 10px; /* Aumente o valor para dar mais espaço em cima */
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-            max-width: 900px; /* Define a largura máxima igual à do widget */
-        }
-    </style>
-<style>
-    #tradingview-widget {
-        margin-top: 30px; /* Aumente o valor para dar mais espaço em cima */
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        max-width: 900px; /* Define a largura máxima igual à do widget */
-    }
-</style>
+
 
 
 
@@ -89,13 +71,7 @@
     </script>
   </div>
   <!-- TradingView Widget END -->
-<style>
-    #tradingview-advanced-chart {
-        margin: 0 auto; /* Remove margens superior e inferior e centraliza horizontalmente */
-        max-width: 900px; /* Define a largura máxima igual à do widget */
-        text-align: center;
-    }
-</style>
+
 
 
 
@@ -122,15 +98,7 @@
   }
     </script>
   </div>
-  
 
-<style>
-    #tradingview-sobre {
-        margin: 11px auto; /* Remove margens superior e inferior e centraliza horizontalmente */
-        max-width: 900px; /* Define a largura máxima igual à do widget */
-        text-align: center; /* Centraliza o texto dentro do widget */
-    }
-</style>
 
 
 
@@ -152,78 +120,59 @@
   }
     </script>
   </div>
-  <style>
-    #tradingview-dadoAtivo {
-        margin: 0px auto; /* Remove margens superior e inferior e centraliza horizontalmente */
-        max-width: 900px; /* Define a largura máxima igual à do widget */
-        text-align: center; /* Centraliza o texto dentro do widget */
-    }
-</style>
+ 
 
 
 
 
-<!--Preção do ativo-->
-
-<div class="tradingview-widget-containe" id="tradingview-precao">
-    <div class="tradingview-widget-containe__widget"></div>
-    <div class="tradingview-widget-copyright"><a href="https://br.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text"></span></a></div>
-    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
-    {
-    "interval": "1m",
-    "width": 425,
-    "isTransparent": true,
-    "height": 425,
-    "symbol": "BMFBOVESPA:ITSA4",
-    "showIntervalTabs": true,
-    "displayMode": "single",
-    "locale": "br",
-    "colorTheme": "dark"
-  }
-    </script>
+<!-- Contêiner para os widgets -->
+<div class="tradingview-widget-container">
+  <!-- Preço do Ativo -->
+  <div class="tradingview-widget-containe" id="tradingview-precao">
+      <div class="tradingview-widget-containe__widget"></div>
+      <div class="tradingview-widget-copyright">
+          <a href="https://br.tradingview.com/" rel="noopener nofollow" target="_blank">
+              <span class="blue-text"></span>
+          </a>
+      </div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+      {
+          "interval": "1m",
+          "width": 425,
+          "isTransparent": true,
+          "height": 425,
+          "symbol": "BMFBOVESPA:ITSA4",
+          "showIntervalTabs": true,
+          "displayMode": "single",
+          "locale": "br",
+          "colorTheme": "dark"
+      }
+      </script>
   </div>
-  <style>
-   #tradingview-precao {
-    position: relative;
-    top: -90px; /* Move o elemento 100 pixels para cima */
-    margin-left: 565px; /* Remove as margens extras e centraliza horizontalmente */
-    max-width: 425px; /* Define a largura máxima igual à do widget */
-    text-align: center; /* Centraliza o texto dentro do widget */
-}
 
-</style>
- 
-
-
-<!--Noticias-->
-
-
-<div class="tradingview-widget-containe" id="tradingview-noticia">
-  <div class="tradingview-widget-containe__widget"></div>
-  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text"></span></a></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
-  {
-  "feedMode": "symbol",
-  "isTransparent": true,
-  "displayMode": "adaptive",
-  "width": 400,
-  "height": 550,
-  "colorTheme": "dark",
-  "locale": "en",
-  "symbol": "BMFBOVESPA:ITSA4"
-}
-  </script>
-  <style>
-    #tradingview-noticia {
-     position: relative;
-     top: -500px; /* Move o elemento 100 pixels para cima */
-     margin-left: 1100px; /* Remove as margens extras e centraliza horizontalmente */
-     max-width: 425px; /* Define a largura máxima igual à do widget */
-     text-align: center; /* Centraliza o texto dentro do widget */
- }
- 
- </style>
+  <!-- Notícias -->
+  <div class="tradingview-widget-containe" id="tradingview-noticia">
+      <div class="tradingview-widget-containe__widget"></div>
+      <div class="tradingview-widget-copyright">
+          <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+              <span class="blue-text"></span>
+          </a>
+      </div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+      {
+          "feedMode": "symbol",
+          "isTransparent": true,
+          "displayMode": "adaptive",
+          "width": 400,
+          "height": 550,
+          "colorTheme": "dark",
+          "locale": "en",
+          "symbol": "BMFBOVESPA:ITSA4"
+      }
+      </script>
+  </div>
 </div>
+
 
 
 <!--Rodape-->
@@ -256,16 +205,6 @@
       <p>&copy; 2024 Bols investimentos. Todos os direitos reservados.</p>
   </div>
 </footer>
-
-
-
-
-
-
-
-
-
-
 
 
 

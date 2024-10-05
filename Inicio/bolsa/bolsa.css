@@ -1,7 +1,9 @@
+/* Reset geral */
 * {
     box-sizing: border-box;
 }
 
+/* Corpo da página */
 body {
     display: flex;
     flex-direction: column;
@@ -34,8 +36,7 @@ header {
 #bols-logo {
     width: 150px;
     height: auto;
-    margin-right: 590px; /* Reduz a margem entre o logo e a navegação */
-
+    margin-right: auto; /* Mantém o logo à esquerda */
 }
 
 #menu-toggle {
@@ -66,42 +67,38 @@ nav a {
         display: block; /* Mostra o botão do menu em telas menores */
     }
 
-    /* Menu móvel */
-    @media (max-width: 600px) {
-        nav {
-            position: fixed;
-            top: 100px;
-            left: 0;
-            width: 100%;
-            background-color: rgb(226, 226, 226);
-            flex-direction: column;
-            align-items: center;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-in-out;
-        }
-    
-        nav.show {
-            max-height: 300px; /* Ajuste conforme necessário */
-        }
-    
-        nav a {
-            width: 100%;
-            text-align: center;
-            padding: 15px 0;
-            font-size: 20px;
-        }
+    nav {
+        position: fixed;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        background-color: rgb(226, 226, 226);
+        flex-direction: column;
+        align-items: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
     }
 
+    nav.show {
+        max-height: 300px; /* Ajuste conforme necessário */
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+        font-size: 20px;
+    }
 }
 
-
+/* Ativos */
 .hidden-ativos {
     display: none; /* Oculta inicialmente os ativos escondidos */
 }
 
 #sec-ativos {
-    display: flex; /* Usa Flexbox para alinhar os itens em linha */
+    display: flex;
     flex-wrap: wrap; /* Permite que os itens que não cabem na linha atual vão para a linha seguinte */
     justify-content: center; /* Centraliza os itens horizontalmente */
     text-align: center; /* Centraliza o texto */
@@ -109,16 +106,14 @@ nav a {
 }
 
 .sec-ativos {
-    
     display: inline-block; /* Faz com que os elementos fiquem lado a lado */
     vertical-align: top; /* Alinha os itens no topo */
     width: 150px; /* Ajuste o tamanho conforme necessário */
     margin: 10px; /* Espaçamento entre os itens */
-    padding:20px;
+    padding: 20px;
     background-color: rgba(0, 0, 0, 0.233);
     border: 1px solid #004c68;
     transition: background-color 500ms, transform 500ms; /* Transição suave para hover */
-    ;
 }
 
 .sec-ativos:hover {
@@ -146,31 +141,17 @@ nav a {
     cursor: default;
 }
 
-.sec-ativos:nth-child(10n) {
-    clear: both;
-  }
-  
-
-  #sec-ativos {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-
-  }
-
-
-
+/* Barra de Pesquisa */
 #pesquisa {
-
-    
-     
     width: 40%;
     padding: 14px;
     border: 1px solid #004c68;
     border-radius: 5px;
-    margin-bottom: 15px; /* Espaçamento inferior para dar espaço entre a barra de pesquisa e o conteúdo abaixo */
+    margin-bottom: 15px; /* Espaçamento inferior */
     margin-top: 40px;
 }
 
+/* Botão de adicionar ativos */
 #adicionarAtivoButton {
     padding: 10px 20px;
     background-color: #004c68;
@@ -203,65 +184,48 @@ nav a {
     }
 }
 
-/*Barra de Pesquisa*/
-/* Estilo da barra de pesquisa */
+/* Barra de Pesquisa aprimorada */
 .search-bar-container {
-    width: 100%; /* Largura total */
-    max-width: 400px; /* Largura máxima da barra de pesquisa */
-    margin: 20px auto; /* Centraliza horizontalmente */
-    display: flex; /* Usar flexbox para alinhar os itens */
-    border-radius: 30px; /* Bordas arredondadas */
-    overflow: hidden; /* Esconde partes do container que saem da borda */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    display: flex;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo do input de pesquisa */
 #search-bar {
-    flex: 1; /* Faz o input ocupar o espaço restante */
-    padding: 12px 15px; /* Espaçamento interno do input */
-    border: none; /* Remove borda padrão do input */
-    border-radius: 30px 0 0 30px; /* Bordas arredondadas à esquerda */
-    outline: none; /* Remove contorno padrão ao focar */
-    font-size: 16px; /* Tamanho da fonte */
-    color: #333; /* Cor do texto */
-    transition: all 0.3s; /* Transição suave para efeitos */
+    flex: 1;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 30px 0 0 30px;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s;
 }
 
-/* Efeito ao focar no input */
 #search-bar:focus {
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra ao focar */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-/* Estilo do botão de pesquisa */
 #search-button {
-    padding: 12px 20px; /* Espaçamento interno do botão */
-    border: none; /* Remove borda padrão do botão */
-    background-color: #007BFF; /* Cor de fundo do botão */
-    color: white; /* Cor do texto do botão */
-    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
-    border-radius: 0 30px 30px 0; /* Bordas arredondadas à direita */
-    font-size: 16px; /* Tamanho da fonte */
-    transition: background-color 0.3s, transform 0.3s; /* Efeito de transição */
+    padding: 12px 20px;
+    border: none;
+    background-color: #ffc600;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 30px 30px 0;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-/* Efeito ao passar o mouse sobre o botão */
 #search-button:hover {
-    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
-    transform: translateY(-2px); /* Sobe suavemente ao passar o mouse */
+    background-color: #ffc600;
+    transform: translateY(-2px);
 }
 
-/* Efeito ao clicar no botão */
 #search-button:active {
-    transform: translateY(0); /* Retorna ao lugar ao clicar */
+    transform: translateY(0);
 }
-
-
-
-
-
-  
-  
-
-
-  
-  

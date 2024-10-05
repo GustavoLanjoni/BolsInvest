@@ -1,192 +1,280 @@
 * {
-        box-sizing: border-box;
-    }
-    
-    body {
-        display: flex;
-        flex-direction: column;
-        font-family: 'Inter', sans-serif;
-        background-color: #1e222d;
-        margin: 0;
-        height: 100%;
-        overflow-x: hidden; /* Remove a rolagem horizontal */
-        
-    }
-    
-    /* Cabeçalho */
-    header {
-        display: flex;
-        align-items: center;
-        padding: 10px 80px;
-        background-color: #ffffff;
-        height: 100px;
-        width: 100%;
-        z-index: 100;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-    
-    #bols-logo {
-        width: 150px;
-        height: auto;
-        margin-right: 550px; /* Reduz a margem entre o logo e a navegação */
-    
-    }
-    
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    background-color: #1e222d;
+    margin: 0;
+    height: 100%;
+    overflow-x: hidden; /* Remove a rolagem horizontal */
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px 5%;
+    background-color: #ffffff;
+    height: 80px;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+}
+
+#bols-logo {
+    width: 20%;
+    max-width: 150px;
+    height: auto;
+}
+
+#menu-toggle {
+    display: none; /* Esconde o botão do menu por padrão */
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 200ms, color 200ms;
+}
+
+/* Menu móvel */
+@media (max-width: 768px) {
     #menu-toggle {
-        display: none; /* Esconde o botão do menu por padrão */
-        border: none;
-        background: none;
-        cursor: pointer;
+        display: block; /* Mostra o botão do menu em telas menores */
     }
-    
+
     nav {
-        display: flex;
-        gap: 20px;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: rgb(226, 226, 226);
+        flex-direction: column;
+        align-items: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
     }
-    
+
+    nav.show {
+        max-height: 300px; /* Ajuste conforme necessário */
+    }
+
     nav a {
-        text-decoration: none;
-        color: #000;
-        font-weight: 500;
-        font-size: 18px;
-        padding: 10px 15px;
-        border-radius: 5px;
-        transition: background-color 200ms, color 200ms;
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+        font-size: 1.25rem;
     }
-    
-    /* Menu móvel */
-    @media (max-width: 600px) {
-        #menu-toggle {
-            display: block; /* Mostra o botão do menu em telas menores */
-        }
-    
-        /* Menu móvel */
-        @media (max-width: 600px) {
-            nav {
-                position: fixed;
-                top: 100px;
-                left: 0;
-                width: 100%;
-                background-color: rgb(226, 226, 226);
-                flex-direction: column;
-                align-items: center;
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.3s ease-in-out;
-            }
-        
-            nav.show {
-                max-height: 300px; /* Ajuste conforme necessário */
-            }
-        
-            nav a {
-                width: 100%;
-                text-align: center;
-                padding: 15px 0;
-                font-size: 20px;
-            }
-        }
-    
-    }
+}
 
-
-    
+/* Ícone voltar */
 .voltar {
     position: relative;
     top: 100px;
-    left: 400px;
-    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Suaviza a transformação e a sombra */
+    left: 10%;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .voltar:active {
-    animation: smoothJump 0.6s ease-in-out; /* Aplica a animação suave ao clicar */
+    animation: smoothJump 0.6s ease-in-out;
+}
+
+/* Estilização do rodapé */
+footer {
+    text-align: center;
+    background-color: #004c68;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    margin-top: auto;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+.contact-info, .footer-links, .social-media {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px; /* Garante que os elementos não fiquem muito pequenos */
+}
+
+h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.footer-links a, .social-media a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+.footer-links a:hover, .social-media a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    background-color: #00344e;
+    padding: 10px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Barra de rolagem */
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #d4d4d4;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #022d3d;
+    border: 1px solid #004c68;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #004c68;
+    border: 0;
+}
+
+nav a:hover {
+    background-color: #022d3d;
+    color: white;
+}
+
+/* Ajustes adicionais para responsividade geral */
+@media (max-width: 600px) {
+    header {
+        padding: 10px;
+    }
+
+    #bols-logo {
+        width: 80px;
+    }
+
+    nav a {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-info, .footer-links, .social-media {
+        max-width: 100%;
+    }
+
+    .voltar {
+        left: 5%;
+        top: 20px;
+    }
 }
 
 
 
+/*Estilização dos Widget*/
+
+/*Ativo*/
+#tradingview-widget {
+    margin-top: 10px; /* Aumente o valor para dar mais espaço em cima */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 900px; /* Define a largura máxima igual à do widget */
+}
+
+#tradingview-widget {
+    margin-top: 30px; /* Aumente o valor para dar mais espaço em cima */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 900px; /* Define a largura máxima igual à do widget */
+}
+
+/*Grafico*/
+
+#tradingview-advanced-chart {
+    margin: 0 auto; /* Remove margens superior e inferior e centraliza horizontalmente */
+    max-width: 900px; /* Define a largura máxima igual à do widget */
+    text-align: center;
+}
+
+/*Sobre o Ativo*/
+#tradingview-sobre {
+    margin: 11px auto; /* Remove margens superior e inferior e centraliza horizontalmente */
+    max-width: 900px; /* Define a largura máxima igual à do widget */
+    text-align: center; /* Centraliza o texto dentro do widget */
+}
+
+/*Dados do Ativo*/
+#tradingview-dadoAtivo {
+    margin: 0px auto; /* Remove margens superior e inferior e centraliza horizontalmente */
+    max-width: 900px; /* Define a largura máxima igual à do widget */
+    text-align: center; /* Centraliza o texto dentro do widget */
+}
+
+/* Contêiner para os widgets */
+.tradingview-widget-container {
+    display: flex; /* Habilita o Flexbox */
+    justify-content: space-between; /* Espaça os elementos de forma uniforme */
+    align-items: flex-start; /* Alinha os itens na parte superior */
+    margin: 20px auto; /* Centraliza o contêiner na página */
+    max-width: 900px; /* Define a largura máxima do contêiner */
+}
+
+/* Estilo para cada widget */
+.tradingview-widget-containe {
+    flex: 1; /* Permite que os widgets cresçam para ocupar o espaço disponível */
+    max-width: 425px; /* Define a largura máxima igual à do widget */
+    text-align: center; /* Centraliza o texto dentro do widget */
+    margin: 0 10px; /* Adiciona uma margem horizontal entre os widgets */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .tradingview-widget-container {
+        flex-direction: column; /* Muda para uma coluna em telas menores */
+        align-items: center; /* Centraliza os widgets */
+    }
+
+    .tradingview-widget-containe {
+        max-width: 90%; /* Ajusta a largura para 90% em telas menores */
+        margin: 10px 0; /* Margem vertical entre os widgets */
+    }
+}
 
 
 
-    
-    body {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    /* Estilização do rodapé */
-    footer {
-        text-align: center;
-        background-color: #004c68; /* Cor de fundo */
-        color: white; /* Cor do texto */
-        text-align: center;
-        font-family: 'Inter', sans-serif;
-        width: 100%; /* Garante que o rodapé ocupe a largura total */
-        margin-top: auto; /* Faz o rodapé se posicionar na parte inferior da página */
-    }
-    
-    /* Conteúdo do rodapé */
-    .footer-content {
-        display: flex;
-        align-items: flex-start;
-        flex-wrap: wrap; /* Permite que o conteúdo se ajuste em telas menores */
-    }
-    
-    .contact-info, .footer-links, .social-media {
-    
-        flex: 1; /* Faz com que as seções ocupem espaço proporcionalmente */
-        max-width: 5000px; /* Define uma largura máxima para melhor layout */
-    }
-    
-    h4 {
-        font-size: 18px;
-        margin-bottom: 10px;
-        text-transform: uppercase;
-        font-weight: bold;
-    }
-    
-    .footer-links a, .social-media a {
-        display: block;
-        color: white;
-        text-decoration: none;
-        margin: 10px 0;
-    }
-    
-    .footer-links a:hover, .social-media a:hover {
-        text-decoration: underline;
-    }
-    
-    .footer-bottom {
-        background-color: #00344e; /* Cor mais escura para diferenciar a parte inferior */
-        padding: 10px;
-    }
-    
-    .footer-bottom p {
-        margin: 0;
-        font-size: 14px;
-    }
-    
-
-
-    /* Barra de rolagem */
-body::-webkit-scrollbar {
-        width: 12px;
-    }
-    
-    body::-webkit-scrollbar-track {
-        background-color: #d4d4d4;
-    }
-    
-    body::-webkit-scrollbar-thumb {
-        background-color: #022d3d;
-        border: 1px solid #004c68;
-    }
-    
-    body::-webkit-scrollbar-thumb:hover {
-        background-color: #004c68;
-        border: 0;
-    }
-    
-    nav a:hover {
-        background-color: #022d3d;
-        color: white;
-    }
