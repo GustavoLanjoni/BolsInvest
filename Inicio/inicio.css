@@ -6,29 +6,31 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Inter', sans-serif;
-    background-color: white;
     margin: 0;
     height: 100%;
     overflow-x: hidden; /* Remove a rolagem horizontal */
+    background-color: #022d3d;
 }
 
 /* Cabeçalho */
 header {
+
+    font-family: 'INTER';
+    font-weight: ;
     display: flex;
     align-items: center;
-    padding: 10px 60px;
+    padding: 10px 15%;
     background-color: #ffffff;
-    height: 100px;
+    height: 80px;
     width: 100%;
-    z-index: 100;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
 }
 
 #bols-logo {
-    width: 150px;
+    width: 20%;
+    max-width: 150px;
     height: auto;
-    margin-right: 340px; /* Reduz a margem entre o logo e a navegação */
-
 }
 
 #menu-toggle {
@@ -36,6 +38,7 @@ header {
     border: none;
     background: none;
     cursor: pointer;
+    font-size: 24px;
 }
 
 nav {
@@ -47,299 +50,94 @@ nav a {
     text-decoration: none;
     color: #000;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1rem;
     padding: 10px 15px;
     border-radius: 5px;
     transition: background-color 200ms, color 200ms;
 }
 
 /* Menu móvel */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     #menu-toggle {
         display: block; /* Mostra o botão do menu em telas menores */
     }
 
-    /* Menu móvel */
-    @media (max-width: 600px) {
-        nav {
-            position: fixed;
-            top: 100px;
-            left: 0;
-            width: 100%;
-            background-color: rgb(226, 226, 226);
-            flex-direction: column;
-            align-items: center;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-in-out;
-        }
-    
-        nav.show {
-            max-height: 300px; /* Ajuste conforme necessário */
-        }
-    
-        nav a {
-            width: 100%;
-            text-align: center;
-            padding: 15px 0;
-            font-size: 20px;
-        }
-    }
-
-}
-
-/* Responsivo adicional para tablets e telas maiores */
-@media (max-width: 1024px) {
-    .nomeUsuario {
-        font-size: 2.5rem;
-    }
-
-    .bemVindo {
-        font-size: 1.3rem;
-        top: 155px; /* Ajuste o top conforme necessário */
-        left: 50%; /* Centraliza horizontalmente */
-        transform: translateX(-50%);
-    }
-
-    #frase {
-        font-size: 1.5rem; /* Ajusta o tamanho da fonte */
-    }
-
-    .h2-conta, .olho-aberto, .h3-1, .h3-2, .h3-3, .preço-1, .preço-2, .preço-3 {
-        position: static; /* Remove o posicionamento absoluto */
-        margin: 10px 0; /* Adiciona margem para melhor espaçamento */
-    }
-
-    .h2-conta {
-        margin-top: 20px;
-    }
-
-    .saque-deposito-extratos {
-        flex-direction: column; /* Empilha os botões verticalmente */
+    nav {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: rgb(226, 226, 226);
+        flex-direction: column;
         align-items: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
     }
 
-    .bt-deposito, .bt-extrato, .bt-saque {
-        width: 100%; /* Ocupa toda a largura disponível */
-        margin-bottom: 10px; /* Adiciona margem entre os botões */
+    nav.show {
+        max-height: 300px; /* Ajuste conforme necessário */
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+        font-size: 1.25rem;
     }
 }
 
-main {
-    flex: 1;
-    background-color: #022d3d;
-    color: white;
-    text-align: center;
-}
 
-/* Barra de rolagem */
-body::-webkit-scrollbar {
-    width: 12px;
-}
-
-body::-webkit-scrollbar-track {
-    background-color: #d4d4d4;
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: #022d3d;
-    border: 1px solid #004c68;
-}
-
-body::-webkit-scrollbar-thumb:hover {
-    background-color: #004c68;
-    border: 0;
-}
-
-nav a:hover {
-    background-color: #022d3d;
-    color: white;
-}
-
-/* Estilos específicos */
-.nomeUsuario {
-    font-size: 40px;
-    margin-left: 50px;
-}
-
-.bemVindo {
-    font-family: 'Inter', sans-serif;
-    font-size: 19px;
-    position: absolute;
-    top: 155px;
-    left: 51.4px;
-}
-
-#frase {
-    font-size: 20px;
-    position: absolute;
-    top: 170px;
-    left: 70%;
-    transform: translateX(-50%);
-}
-
-.h2-conta {
-    position: absolute;
-    top: 400px;
-    left: 50px;
-}
-
-.h2 {
-    font-weight: 500;
-    font-family: 'Inter', sans-serif;
-}
-
-.olho-aberto {
-    position: absolute;
-    top: 415px;
-    left: 175px;
-    cursor: pointer;
-}
-
-.h3-1, .h3-2, .h3-3 {
-    position: absolute;
-    top: 499px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 300;
-}
-
-.h3-1 {
-    left: 70px;
-}
-
-.h3-2 {
-    left: 18%;
-}
-
-.h3-3 {
-    left: 33%;
-}
-
-.preço-1, .preço-2, .preço-3 {
-    position: absolute;
-    top: 520px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-}
-
-.preço-1 {
-    left: 35.4%;
-}
-
-.preço-2 {
-    left: 5.1%;
-}
-
-.preço-3 {
-    left: 19.4%;
-}
-
-/* Botões de saque, depósito e extratos */
-.saque-deposito-extratos {
-    position: absolute;
-    top: 500px;
-    left: 50.4%;
+/*Carrossel*/
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%; /* Ajuste conforme necessário */
+    margin: auto;
+    overflow: hidden;
     display: flex;
-    gap: 20px;
-    margin-top: 20px;
-    cursor: pointer;
-    flex-wrap: wrap; /* Permite que os botões se ajustem em telas menores */
+    align-items: center;
 }
 
-.bt-deposito, .bt-extrato, .bt-saque {
-    background-color: #004c68; /* Cor de fundo */
-    color: white; /* Cor do texto */
-    border: none; /* Remove a borda padrão */
-    border-radius: 5px; /* Cantos arredondados */
-    padding: 15px 30px; /* Espaçamento interno */
-    font-size: 16px; /* Tamanho da fonte */
-    text-align: center; /* Alinhamento centralizado */
-    text-decoration: none; /* Remove o sublinhado */
-    cursor: pointer; /* Cursor de pointer para indicar que é clicável */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animações suaves */
-}
-
-.bt-deposito:hover, .bt-extrato:hover, .bt-saque:hover {
-    transform: translateY(-5px); /* Move o botão para cima */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra para efeito de elevação */
-}
-
-.bt-extrato, .bt-saque {
-    background-color: transparent;
-    color: #004c68; /* Cor do texto */
-    border: 2px solid #004c68; /* Borda com cor */
-}
-
-.bt-extrato:hover, .bt-saque:hover {
-    background-color: #004c68; /* Muda o fundo para o mesmo tom do texto */
-    color: white; /* Muda a cor do texto para branco */
-}
-
-
-
-
-/* Definindo o layout da página para garantir que o rodapé fique no fundo */
-html, body {
-    height: 120.4%;
-    margin: 0;
-}
-
-body {
+.carousel-slide {
     display: flex;
-    flex-direction: column;
+    transition: transform 0.5s ease-in-out;
 }
 
-/* Estilização do rodapé */
-footer {
-    background-color: #004c68; /* Cor de fundo */
-    color: white; /* Cor do texto */
-    text-align: center;
-    font-family: 'Inter', sans-serif;
-    width: 100%; /* Garante que o rodapé ocupe a largura total */
-    margin-top: auto; /* Faz o rodapé se posicionar na parte inferior da página */
+.tradingview-widget-containe {
+    min-width: 150px; /* Definindo a largura para que o slide ocupe espaço fixo */
+    margin-right: 10px; /* Espaçamento entre os slides */
 }
 
-/* Conteúdo do rodapé */
-.footer-content {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap; /* Permite que o conteúdo se ajuste em telas menores */
-}
-
-.contact-info, .footer-links, .social-media {
-
-    flex: 1; /* Faz com que as seções ocupem espaço proporcionalmente */
-    max-width: 500px; /* Define uma largura máxima para melhor layout */
-}
-
-h4 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.footer-links a, .social-media a {
-    display: block;
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    width: 60px;
+    height: 60px;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
     color: white;
-    text-decoration: none;
-    margin: 10px 0;
-}
-
-.footer-links a:hover, .social-media a:hover {
-    text-decoration: underline;
-}
-
-.footer-bottom {
-    background-color: #00344e; /* Cor mais escura para diferenciar a parte inferior */
+    border: none;
     padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 20px;
 }
 
-.footer-bottom p {
-    margin: 0;
-    font-size: 14px;
+#prevBtn {
+    left: 10px;
 }
 
-/*POP UP */
+#nextBtn {
+    right: 10px;
+}
 
 
+
+#tradingview-ibr11 {
+
+    margin-top: 40px;
+    color: #ffffff;
+
+
+}

@@ -3,153 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="inicio.css">
     <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
-    <title>Bols investimento</title>
+    <link rel="stylesheet" href="inicio.css">
+    <title>Bols Invest</title>
 </head>
 <body>
-    <header>
+    
+    <header><!--cabeçalho-->
         <img id="bols-logo" src="img/Header.png" alt="Logo Bols">
         <button id="menu-toggle" onclick="toggleMenu()">
-            <img src="menu-aberto.png" alt="Botão Menu" width="40px" height="40px">
         </button>
         <nav id="nav">
             <a href="inicio.html">INICIO</a>
             <a href="bolsa/bolsa.html">BOLSA</a>
-            <a href="./estudo.html">ESTUDO</a>
+            <a href="./Estudo/estudo.html">ESTUDO</a>
             <a href="./sobre.html">SOBRE</a>
         </nav>
     </header>
 
 
-    <div class="perfil">
-        <h1 class="nomeUsuario">Olá, Gustavo.</h1>
-        <p class="bemVindo">Seja Bem Vindo!</p>
-            <!-- Outras informações do usuário podem ser exibidas aqui -->
-    </div>     
-
-
-    <!-- Gerador de frasses-->
-    <div>
-        <p id="frase">Carregado uma frase...</p>
-    </div>
-        
-    <script>
-        // Array de frases
-        const frases = [
-            "Não coloque todos os ovos na mesma cesta.",
-            "O tempo no mercado é mais importante do que o timing de mercado.",
-            "Invista em conhecimento, ele paga os melhores juros.",
-            "Riscos fazem parte dos retornos.",
-            "Paciência é o segredo do sucesso nos investimentos.",
-            "A diversificação é o único almoço grátis no mercado financeiro.",
-            "Ganhar dinheiro lentamente é melhor do que perder tudo rapidamente.",
-            "A volatilidade é o preço que você paga por retornos melhores a longo prazo.",
-            "Investir sem pesquisar é como jogar pôquer sem olhar as cartas.",
-            "Não é o quanto você ganha, mas o quanto você economiza e investe.",
-            "Não tente prever o mercado, seja um investidor disciplinado.",
-            "A melhor hora para começar a investir foi ontem. A segunda melhor é hoje.",
-            "Invista com uma visão de longo prazo, não para ganhos imediatos.",
-            "Os juros compostos são a força mais poderosa do universo.",
-            "O dinheiro cresce para quem sabe esperar.",
-            "Seja ganancioso quando os outros estiverem com medo.",
-            "A disciplina financeira vence o medo do mercado.",
-            "Investir com base em emoções pode custar caro.",
-            "Invista em ativos que você compreende totalmente.",
-            "O melhor investimento que você pode fazer é em si mesmo."
-        ];
-
-        // Função para gerar uma frase aleatória
-        function gerarFrase() {
-            // Gerar um número aleatório com base no tamanho do array
-            const indice = Math.floor(Math.random() * frases.length);
-            // Alterar o conteúdo do parágrafo com a nova frase
-            document.getElementById("frase").innerText = frases[indice];
-        }
-
-        // Chama a função gerarFrase quando a página for carregada
-        window.onload = gerarFrase;
-    </script>
-
-    <!--olho que oculta os saldo da conta-->
-    <div class="h2-conta">
-        <h2 class="h2">Sua conta</h2>
-        
-    </div>    
-
-    <div class="olho-aberto">
-        <img src="img/olho-aberto.png"width="40" height="40" alt="olho-aberto">
-    </div>    
-    <script src="js/script.js"></script>
-
-
-    <!--Saldo da conta-->
-    <div class="saldos">
-
-        <h3 class="h3-1">Patrimônio</h3>
-        <h3 class="h3-2">Conta corrente</h3>
-        <h3 class="h3-3">Lançamento futuros</h3>
-
-    </div>
-
-    <div class="patrimonio">
-        <h2 class="preço-1">R$ 0,00</h2>
-        <h2 class="preço-2">R$ 0,00</h2>
-        <h2 class="preço-3">R$ 0,00</h2>
-    </div>    
-
-    <!--Botoes de saque, deposito e extratos -->
-    <div class="saque-deposito-extratos">
-
-        <a href="deposito/deposito.html" class="bt-deposito">Deposito</a>
-        <button  class="bt-extrato">Extrato</button>
-        <a href="saque.html" class="bt-saque">Saque</a></button>
-
-
-    </div>
-
-
-    <footer>
-        <div class="footer-content">
-            <div class="contact-info">
-                <h4>Contato</h4>
-                <p>Email: exemplo@dominio.com</p>
-                <p>Telefone: (11) 1234-5678</p>
-            </div>
-            <div class="footer-links">
-                <h4>Links Rápidos</h4>
-                <a href="inicio.html">Home</a>
-                <a href="sobre.html">Sobre</a>
-                <a href="estudo.html">Estudos</a>
-                <a href="contato.html">Contato</a>
-            </div>
-            <div class="social-media">
-                <h4>Siga-nos</h4>
-                <a href="facebook.com.br">Facebook</a>
-                <a href="https://www.tiktok.com/@gustavo_lanjoni">TikTok</a>
-                <a href="https://www.instagram.com/devlanjoni/">Instagram</a>
-            </div>
+    <div class="carousel-container">
+        <button id="prevBtn" class="carousel-button">&lt;</button>
+        <div class="carousel-slide">
             
+            <div class="tradingview-widget-containe" id="tradingview-ibr11"><!-- IBR11 -->
+
+
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text"></span></a></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                    {
+                    "symbol": "BMFBOVESPA:IBRA11",
+                    "width": 350,
+                    "isTransparent": true,
+                    "colorTheme": "dark",
+                    "locale": "br",
+                    "largeChartUrl": "http://127.0.0.1:5500/Inicio/bolsa/bolsa.html"
+                }
+                    </script>
+                </div>
+  
+
+
+            </div>
+            <div class="tradingview-widget-containe" id="tradingview-ibr11"><!-- IBOV -->
+                
+             
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text"></span></a></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                    {
+                    "symbol": "BMFBOVESPA:IBOV",
+                    "width": 350,
+                    "isTransparent": true,
+                    "colorTheme": "dark",
+                    "locale": "br",
+                    "largeChartUrl": "http://127.0.0.1:5500/Inicio/bolsa/bolsa.html"
+                    }
+                    </script>
+                </div>
+  
+
+
+            </div>
+            <div class="tradingview-widget-containe" id="tradingview-ibr11"><!--DAX-->
+
+            
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text"></span></a></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                    {
+                    "symbol": "XETR:DAX",
+                    "width": 350,
+                    "isTransparent": true,
+                    "colorTheme": "dark",
+                    "locale": "br",
+                    "largeChartUrl": "http://127.0.0.1:5500/Inicio/bolsa/bolsa.html"
+                    }
+                    </script>
+                </div>
+  
+
+            </div>
+            <div class="tradingview-widget-containe" id="tradingview-ibr11"><!--SSE Composite Index-->
+
+
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text"></span></a></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                    {
+                    "symbol": "SSE:000001",
+                    "width": 350,
+                    "isTransparent": true,
+                    "colorTheme": "dark",
+                    "locale": "br",
+                    "largeChartUrl": "http://127.0.0.1:5500/Inicio/bolsa/bolsa.html"
+                    }
+                    </script>
+                </div>
+                
+
+            </div>
+
+            <div class="tradingview-widget-containe" id="tradingview-ibr11"><!--Índice Hang Seng-->
+                
+
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text"></span></a></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                    {
+                    "symbol": "HSI:HSI",
+                    "width": 350,
+                    "isTransparent": true,
+                    "colorTheme": "dark",
+                    "locale": "br",
+                    "largeChartUrl": "http://127.0.0.1:5500/Inicio/bolsa/bolsa.html"
+                    }
+                    </script>
+                </div>
+            </div>
+
+            <div class="tradingview-widget-containe" id="tradingview-ibov">
+                <!--Talvez colocar um button-->
+            </div>
+
         </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2024 Bols investimentos. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+        <button id="nextBtn" class="carousel-button">&gt;</button>
 
 
+    </div>
+    
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+ 
+
+
+    <!--Script do Carrosel -->
     <script>
-        function toggleMenu() {
-            var nav = document.getElementById("nav");
-            nav.classList.toggle("show");
-        }
+const carouselSlide = document.querySelector('.carousel-slide');
+const prevButton = document.getElementById('prevBtn');
+const nextButton = document.getElementById('nextBtn');
+
+let counter = 0;
+const widgets = document.querySelectorAll('.tradingview-widget-containe');
+const size = widgets[0].clientWidth + 10; // Largura do widget + margem
+
+// Ocultar o botão esquerdo no início
+prevButton.style.display = 'none';
+
+nextButton.addEventListener('click', () => {
+    if (counter >= widgets.length - 1) {
+        counter = -1; // Reinicia no final
+    }
+    counter++;
+    carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+
+    // Mostrar o botão "prevBtn" se não estiver no primeiro slide
+    if (counter > 0) {
+        prevButton.style.display = 'block';
+    }
+
+    // Ocultar o botão "nextBtn" se estiver no último slide
+    if (counter === widgets.length - 1) {
+        nextButton.style.display = 'none';
+    } else {
+        nextButton.style.display = 'block';
+    }
+});
+
+prevButton.addEventListener('click', () => {
+    if (counter <= 0) {
+        counter = widgets.length; // Vai para o último slide ao voltar do início
+    }
+    counter--;
+    carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+
+    // Mostrar o botão "nextBtn" se não estiver no último slide
+    if (counter < widgets.length - 1) {
+        nextButton.style.display = 'block';
+    }
+
+    // Ocultar o botão "prevBtn" se estiver no primeiro slide
+    if (counter === 0) {
+        prevButton.style.display = 'none';
+    } else {
+        prevButton.style.display = 'block';
+    }
+});
+
     </script>
-
-
-
-
-
-
 </body>
 </html>
